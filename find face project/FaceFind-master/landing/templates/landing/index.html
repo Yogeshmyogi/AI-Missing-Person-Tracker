@@ -1,0 +1,213 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+
+        <div class="container">
+                <div class="row">
+                        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                                data-aos="fade-up" data-aos-delay="200">
+                                <h1>Even One Missing Person Is One Too Many!</h1>
+                                <h2>FaceFind, firmly believes in that, and we are committed to change this by
+                                        finding missing people using Computer Vision and Face
+                                        Recognition Technologies.</h2>
+                                <div class="d-flex justify-content-center justify-content-lg-start">
+                                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                                
+                                </div>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                                <img src="{% static 'landing/img/hero1.png' %}" class="img-fluid animated" alt="">
+                        </div>
+                </div>
+        </div>
+
+</section><!-- End Hero -->
+<main id="main">
+
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+                <div class="container" data-aos="fade-up">
+
+                        <div class="section-title">
+                                <h2>About Us</h2>
+                        </div>
+
+                        <div class="row content">
+                                <div class="col-lg-6">
+                                        <p>
+                                                The thought of a family member, a friend or someone else you care about
+                                                going missing can be terrifying.
+                                                We at FaceFind help find your loved ones using Face Recognition
+                                                Technologies. If someone you know is missing, then,
+                                        </p>
+                                        <ul>
+                                                <li><i class="ri-check-double-line"></i>Register the missing person with
+                                                        us. </li>
+                                                <li><i class="ri-check-double-line"></i>We will contact you for a
+                                                        background check.</li>
+                                                <li><i class="ri-check-double-line"></i>Once verified, the missing
+                                                        person is added to our database of missing people.</li>
+                                                <li><i class="ri-check-double-line"></i>When volunteers report a
+                                                        suspected missing person, we
+                                                        use face recognition to identify a potential match with our
+                                                        database. </li>
+                                                <li><i class="ri-check-double-line"></i>If a match is found we will
+                                                        report to the local authorities and contact you.</li>
+
+                                        </ul>
+                                        <a href="{% url 'create_missing_person' %}" class="btn-learn-more">Register a
+                                                Missing Person</a>
+                                </div>
+                                <div class="col-lg-6 pt-4 pt-lg-0">
+                                        <p>
+                                                It is estimated that a child goes missing in India every eight minutes.
+                                                Millions end up in forced labour, domestic slavery and sex work, in
+                                                what’s become a lucrative industry.
+
+                                                If you ever suspect a person could have been trafficked this way,
+                                        </p>
+                                        <ul>
+                                                <li><i class="ri-check-double-line"></i>Report the suspected person.
+                                                </li>
+                                                <li><i class="ri-check-double-line"></i>We will cross-verify the report
+                                                        to check its validity.</li>
+                                                <li><i class="ri-check-double-line"></i>Once verified, use face
+                                                        recognition to identify a
+                                                        potential match with our database of missing people. </li>
+                                                <li><i class="ri-check-double-line"></i>If a match is found we will
+                                                        report to the local authorities and contact the family/guardian.
+                                                </li>
+
+                                        </ul>
+                                        <a href="{% url 'create_reported_person' %}" class="btn-learn-more">Report a
+                                                Suspected Missing Person</a>
+
+                                </div>
+                        </div>
+
+                </div>
+        </section><!-- End About Us Section -->
+       
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <section id="faq" class="faq section-bg">
+                <div class="container" data-aos="fade-up">
+
+                        <div class="section-title">
+                                <h2>Frequently Asked Questions</h2>
+                        </div>
+
+                        <div class="faq-list">
+                                <ul>
+                                        <li data-aos="fade-up" data-aos-delay="100">
+                                                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                        class="collapse" data-bs-target="#faq-list-1">What happens after
+                                                        I register a Missing Person? <i
+                                                                class="bx bx-chevron-down icon-show"></i><i
+                                                                class="bx bx-chevron-up icon-close"></i></a>
+                                                <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                                                        <p>
+                                                                Once you have successfully registered a missing person,
+                                                                we will contact you for a background check followed by
+                                                                which,
+                                                                we generate a unique Face ID for the missing person
+                                                                using DeepFace.
+                                                                When volunteers report a suspected missing person, we
+                                                                verify and generate a Face ID the same way.
+                                                                We then use DeepFace Find Similar API to identify a
+                                                                potential match with our database of missing person Face
+                                                                IDs.
+                                                                If a match is found we will report to the local
+                                                                authorities and contact you.
+                                                        </p>
+                                                </div>
+                                        </li>
+
+                                        <li data-aos="fade-up" data-aos-delay="200">
+                                                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                        data-bs-target="#faq-list-2" class="collapsed">What happens
+                                                        after I report a Suspected Missing Person? <i
+                                                                class="bx bx-chevron-down icon-show"></i><i
+                                                                class="bx bx-chevron-up icon-close"></i></a>
+                                                <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                                                        <p>
+                                                                Once you have successfully reported a suspected missing
+                                                                person,
+                                                                we will cross-verify the report to check its validity.
+                                                                We then generate a unique Face ID for the missing person
+                                                                using DeepFace,
+                                                                followed by which, we use AI Find Similar API to
+                                                                identify a potential match with
+                                                                our database of missing person Face IDs.
+                                                                If a match is found we will report to the local
+                                                                authorities and contact the family/guardian.
+                                                        </p>
+                                                </div>
+                                        </li>
+
+                                        <li data-aos="fade-up" data-aos-delay="300">
+                                                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                        data-bs-target="#faq-list-3" class="collapsed">How does Azure's
+                                                        Face API work? <i class="bx bx-chevron-down icon-show"></i><i
+                                                                class="bx bx-chevron-up icon-close"></i></a>
+                                                <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                                                        <p>
+                                                                Firstly, it detects a face in the given image and
+                                                                generates
+                                                                a unique identifier string for the detected face in the
+                                                                image.
+                                                                Then to check if two images contain the same person,
+                                                                we use the Find Similar API, that searchs for
+                                                                similar-looking faces
+                                                                given a target Face ID and Face ID array.
+                                                                The API returns a JSON object containing the matched
+                                                                Face ID from the
+                                                                given array along with the confidence score.
+                                                        </p>
+                                                </div>
+                                        </li>
+
+                                        <li data-aos="fade-up" data-aos-delay="300">
+                                                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                        data-bs-target="#faq-list-4" class="collapsed">This seems
+                                                        interesting. How can I help? <i
+                                                                class="bx bx-chevron-down icon-show"></i><i
+                                                                class="bx bx-chevron-up icon-close"></i></a>
+
+                                                <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                                                        <p>
+                                                                Thank you for your interest. Every help towards
+                                                                finding a loved one gone missing
+                                                                counts. You can help us in
+                                                                the following ways, <br>
+                                                                <i class="ri-check-double-line"></i>Please
+                                                                volunteer to spot suspected missing people
+                                                                and report them. <br>
+                                                                <i class="ri-check-double-line"></i>Connect us
+                                                                with NGOs working in this space. <br>
+                                                                <i class="ri-check-double-line"></i>Connect us with
+                                                                relevant state and central
+                                                                government departments.<br>
+                                                                
+                                                        </p>
+
+                                                </div>
+                                        </li>
+
+
+                                </ul>
+                        </div>
+
+                </div>
+        </section><!-- End Frequently Asked Questions Section -->
+
+        <!-- ======= Footer ======= -->
+       
+
+
+</main>
+
+
+{% endblock content%}
