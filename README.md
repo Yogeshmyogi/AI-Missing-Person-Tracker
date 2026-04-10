@@ -5,7 +5,7 @@ Project Overview
 AI Missing Person Tracker is a web-based application that uses face recognition technology to identify and match missing persons.
 It allows users to upload images, report missing individuals, and verify matches using AI.
 
-
+----------------
 
  Features
 
